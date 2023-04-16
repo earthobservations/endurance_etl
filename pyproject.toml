@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "endurance_etl"
+version = "0.1.0"
+description = "Polars and duckdb based json configured simple ETL pipelines"
+authors = ["Benjamin Gutzmann <gutzemann@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+duckdb = "^0.7.1"
+polars = "^0.17.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
