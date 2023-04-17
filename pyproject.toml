@@ -4,14 +4,25 @@ version = "0.1.0"
 description = "Polars and duckdb based json configured simple ETL pipelines"
 authors = ["Benjamin Gutzmann <gutzemann@gmail.com>"]
 license = "MIT"
-readme = "README.md"
+readme = "README.rst"
 
 [tool.poetry.dependencies]
 python = "^3.9"
 
+diskcache = "^5.6.1"
 duckdb = "^0.7.1"
 polars = "^0.17.3"
 
+pyyaml = { version = "^6.0", optional = true }
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.3.1"
+
+[tool.poetry.extras]
+yaml = ["pyyaml"]
 
 [build-system]
 requires = ["poetry-core"]
